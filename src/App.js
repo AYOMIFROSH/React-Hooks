@@ -20,7 +20,7 @@ import Since from './footer';
       rating: <button className='Btn'>4.5</button>},
 
       { title: '365 days', 
-      description: `Baahubali: The Beginning is a 2015 Indian Telugu-language epic action film co-written and directed by S. S. Rajamouli. 
+      description: ` "Baahubali:" The Beginning is a 2015 Indian Telugu-language epic action film co-written and directed by S. S. Rajamouli. 
       The film was produced in Tollywood and was filmed in both Telugu and Tamil languages simultaneously`, 
       posterURL: Bahubali, 
       rating: <button className='Btn'>4.9</button>},
