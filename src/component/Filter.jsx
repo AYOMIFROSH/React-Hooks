@@ -2,9 +2,9 @@ import React from "react";
 
 const Filter = ({ setFilter }) => {
     return (
-        <div>
-            <input type="text" placeholder="Title" onChange={(e) => setFilter(e.target.value)} />
-            <input type="number" placeholder="Rating" onChange={(e) => setFilter(e.target.value)} />
+        <div className="wrappers">
+            <input type="text" className="  input-style" placeholder="Title" onChange={(e) => setFilter(e.target.value)} />
+            <input type="number"  className="input-style" placeholder="Rating" onChange={(e) => setFilter(e.target.value)} />
         </div>
     );
 };

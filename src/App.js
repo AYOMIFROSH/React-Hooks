@@ -7,10 +7,11 @@ import JungleBoy from "./Assests/JungleBoy.jpg"
 import MovieList from './component/MovieList';
 import Filter from './component/Filter';
 import Since from './footer';
+import AddMovie from './component/AddMovie';
 
 
   const App = () => {
-    const movies = [
+    const [movies, setMovies] = useState([
       // Add your movies here
       { title: 'The Lion King', 
       description: `“The Lion King” is a captivating tale set in the African savanna 
@@ -30,7 +31,11 @@ import Since from './footer';
       The movie revolves around a boy who lives harmoniously with animals in the jungles of India`, 
       posterURL: JungleBoy, 
       rating: <button className='Btn'>4.0</button>},
-    ];
+    ]);
+
+    const addMovieToList = (movie) => {
+    setMovies((previous) => [...previous, movie])
+    } 
   
     const [filter, setFilter] = useState('');
   
@@ -40,6 +45,7 @@ import Since from './footer';
         <Switch />
         <Filter setFilter={setFilter} />
         <MovieList movies={filteredMovies} />
+        <AddMovie addMovie={addMovieToList}/>
         <Since />
       </div>
     );
